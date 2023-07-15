@@ -3,51 +3,72 @@ const mongoose = require("mongoose");
 const BookingSchema = new mongoose.Schema({
     Guest_Name: {
         type: String,
-        required: [true, "Please enter your Item Number"],
+
     },
-    Guest_Number: {
+    Phone_Number: {
         type: String,
-        required: [true, "Please enter your Item Number"],
-        },
-    
+
+    },
+
     Address: {
         type: String,
-        required: [true, "Please enter your Item Number"],
-        },
-    Email: {
-        type: String,
-        required: [true, "Please enter your Item Number"],
-        },
+
+    },
+
     Room_Number: {
         type: String,
-        required: [true, "Please enter your Item Number"],
-        },
+
+    },
+    Price: {
+        type: Number,
+
+    },
+    Room_BookType: {
+        type: String,
+
+    },
     Booking_Date_Time: {
         type: String,
-        required: [true, "Please enter your Item Number"],
-        },
+
+    },
     Checkin_Date_Time: {
         type: String,
-        required: [true, "Please enter your Item Number"],
-        },
+
+    },
     Checkout_Date_Time: {
         type: String,
-        required: [true, "Please enter your Item Number"],
-        },
+
+    },
     Number_Of_Children: {
         type: String,
-        required: [true, "Please enter your Item Number"],
-        },
+
+    },
     Number_Of_Adults: {
-            type: String,
-            required: [true, "Please enter your Item Number"],
-            },
+        type: String,
+
+    },
     Special_Request: {
+        type: String,
+
+    },
+    Services: [
+        {
+          Service_Name: {
             type: String,
-            required: [true, "Please enter your Item Number"],
-            },
+    
+          },
+          Service_Charge: {
+            type: Number,
+    
+          },
+          Date_Time: {
+            type: String,
+    
+          },
+        },
+      ],
 
 
 });
 
-module.exports = mongoose.model("Booking",BookingSchema);
+module.exports = mongoose.model("Booking", BookingSchema);
