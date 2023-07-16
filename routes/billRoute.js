@@ -1,5 +1,5 @@
 const express = require("express");
-const { getAllBills, createBill, updatebill, deleteBill, getSingelBill } = require("../controllers/billcontroller");
+const { getAllBills, createBill, updatebill, deleteBill, getSingelBill } = require("../controllers/billController");
 
 
 const router=express.Router();
